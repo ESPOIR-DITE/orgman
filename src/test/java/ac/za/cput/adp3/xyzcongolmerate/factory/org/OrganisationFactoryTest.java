@@ -12,5 +12,7 @@ public class OrganisationFactoryTest {
     public void buildOrganisation() {
         Organisation organisation=OrganisationFactory.buildOrganisation("CPUT");
         Assert.assertNotNull(organisation);
+        System.out.println(organisation.toString());
+
     }
 }

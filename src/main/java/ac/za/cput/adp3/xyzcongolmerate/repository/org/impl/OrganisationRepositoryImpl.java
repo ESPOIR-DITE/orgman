@@ -34,7 +34,11 @@ public class OrganisationRepositoryImpl implements OrganisationRepository {
 
     @Override
     public Organisation read(String orgCode) {
-         return findGender(orgCode);
+        Organisation orga=findGender(orgCode);
+
+        if(orga!=null){
+         return orga;
+        }else return null;
     }
 
 

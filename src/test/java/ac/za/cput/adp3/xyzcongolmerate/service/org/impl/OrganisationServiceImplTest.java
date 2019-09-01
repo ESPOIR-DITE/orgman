@@ -16,13 +16,16 @@ public class OrganisationServiceImplTest {
 
     @Test
     public void a_create() {
-        Assert.assertNotNull(organisationService.create(organisation));
+       // Assert.assertNotNull(organisationService.create(organisation));
+        System.out.println(organisationService.create(organisation));
     }
 
     @Test
     public void b_read() {
         Organisation resultR=organisationService.create(organisation);
+        //System.out.println(resultR.toString());
        Assert.assertNotNull(organisationService.read(resultR.getOrgCode()));
+        System.out.println(organisationService.read(resultR.getOrgCode()).toString());
     }
 
     @Test
