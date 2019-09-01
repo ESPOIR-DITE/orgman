@@ -17,12 +17,16 @@ public class OrganisationUserRepositoryImplTest {
     @Test
     public void a_create() {
         Assert.assertNotNull(organisationUserRepository.create(org));
+        organisationUserRepository.delete(org.getOrgCode(),org.getUserEmail());
     }
 
     @Test
     public void b_read() {
+
         OrganisationUser result=organisationUserRepository.create(org);
-        Assert.assertNotNull(result);
+
+        Assert.assertNotNull(organisationUserRepository.read(result.getOrgCode(),result.getUserEmail()));
+        organisationUserRepository.delete(org.getOrgCode(),org.getUserEmail());
     }
 
     @Test
@@ -30,13 +34,19 @@ public class OrganisationUserRepositoryImplTest {
         OrganisationUser result=organisationUserRepository.create(org);
         OrganisationUser result2= new OrganisationUser(result.getOrgCode(),"voila@!");
         Assert.assertNotEquals(result,result2);
+        organisationUserRepository.delete(org.getOrgCode(),org.getUserEmail());
     }
 
     @Test
     public void e_delete() {
-        OrganisationUser result=organisationUserRepository.create(org);
+        System.out.println("delete mthode");
+        OrganisationUser org1= OrganisationUserFactory.buildOrganisationUser("23","espeo@");
+        System.out.println(org1.toString()+"<<<<<<<<<<<<<<<");
+        OrganisationUser result=organisationUserRepository.create(org1);
+        System.out.println(result.toString()+"  <<<<<");
         organisationUserRepository.delete(result.getOrgCode(),result.getUserEmail());
         Assert.assertNull(organisationUserRepository.read(result.getOrgCode(),result.getUserEmail()));
+        organisationUserRepository.delete(org1.getOrgCode(),org1.getUserEmail());
     }
 
     @Test

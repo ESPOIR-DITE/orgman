@@ -14,18 +14,19 @@ import static org.junit.Assert.*;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class UserDemographyRepositoryImplTest {
     Date bod= new Date();
-    UserDemography userDemography=UserDemographyFactory.buildUserDemography("@emksd","CEO","MAle","Black",bod);
+    UserDemography userDemography=UserDemographyFactory.buildUserDemography("@emksd","CEO","MALE","Black",bod);
     UserDemographyRepositoryImpl userDemographyRepository=UserDemographyRepositoryImpl.getUserDemographyRepository();
     @Test
     public void a_create() {
         Assert.assertNotNull( userDemographyRepository.create(userDemography));
-
+        userDemographyRepository.delete("@emksd");
     }
 
     @Test
     public void b_read() {
        UserDemography result= userDemographyRepository.create(userDemography);
         Assert.assertNotNull(userDemographyRepository.read(result.getUserEmail()));
+        userDemographyRepository.delete("@emksd");
     }
 
     @Test
@@ -34,7 +35,10 @@ public class UserDemographyRepositoryImplTest {
         UserDemography userDemography2=UserDemographyFactory.buildUserDemography("@emksd","CEO","Female","Black",bod);
         UserDemography result2= userDemographyRepository.update(userDemography2);
 
-        Assert.assertNotEquals(result,result2);
+       // System.out.println(result +"<<<<<>>>>>>>>"+ result2);
+        Assert.assertNotEquals(result.toString(),result2.toString());
+        userDemographyRepository.delete("@emksd");
+
     }
 
     @Test
@@ -42,6 +46,7 @@ public class UserDemographyRepositoryImplTest {
         UserDemography result= userDemographyRepository.create(userDemography);
         userDemographyRepository.delete(result.getUserEmail());
         Assert.assertNull(userDemographyRepository.read(result.getUserEmail()));
+        userDemographyRepository.delete("@emksd");
     }
 
     @Test

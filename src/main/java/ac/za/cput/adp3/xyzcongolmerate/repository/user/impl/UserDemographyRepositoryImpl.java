@@ -42,13 +42,13 @@ public class UserDemographyRepositoryImpl implements UserDemographyRepository {
     public UserDemography update(UserDemography userDemography) {
         UserDemography ud =findGender(userDemography.getUserEmail());
         if(ud!=null){
-            userDemographyDB.remove(userDemography);
+            userDemographyDB.remove(ud);
             create(userDemography);
             return userDemography;
         }return null;
     }
 
-    //TODO: Implement body
+
     @Override
     public void delete(String userEmail) {
         UserDemography ud =findGender(userEmail);
@@ -57,7 +57,7 @@ public class UserDemographyRepositoryImpl implements UserDemographyRepository {
         }
     }
 
-    //TODO: Implement body
+
     @Override
     public Set<UserDemography> getAll() {
        return userDemographyDB;
