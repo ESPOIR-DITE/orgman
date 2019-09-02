@@ -10,11 +10,14 @@ import ac.za.cput.adp3.xyzcongolmerate.repository.org.impl.OrganisationUserRepos
 import ac.za.cput.adp3.xyzcongolmerate.repository.user.UserRepository;
 import ac.za.cput.adp3.xyzcongolmerate.repository.user.impl.UserRepositoryImpl;
 import ac.za.cput.adp3.xyzcongolmerate.service.org.OrganisationUserService;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+@Component
 public class OrganisationUserServiceImpl implements OrganisationUserService {
 
     private OrganisationUserRepositoryImpl organisationUserRepository;

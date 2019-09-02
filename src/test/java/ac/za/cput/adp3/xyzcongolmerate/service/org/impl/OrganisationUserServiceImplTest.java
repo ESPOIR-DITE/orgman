@@ -28,7 +28,8 @@ public class OrganisationUserServiceImplTest {
 
     @Test
     public void a_create() {
-        Assert.assertNotNull(organisationUserService.create(org));
+        //Assert.assertNotNull(organisationUserService.create(org));
+        System.out.println(organisationUserService.create(org).toString());
     }
 
     @Test

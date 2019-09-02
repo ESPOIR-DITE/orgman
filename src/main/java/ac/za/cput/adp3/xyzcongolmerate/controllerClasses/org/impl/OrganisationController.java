@@ -1,14 +1,11 @@
-package ac.za.cput.adp3.xyzcongolmerate.controllerClasses.Organisation;
+package ac.za.cput.adp3.xyzcongolmerate.controllerClasses.org.impl;
 
-import ac.za.cput.adp3.xyzcongolmerate.controllerClasses.ControllerInt;
+import ac.za.cput.adp3.xyzcongolmerate.controllerClasses.org.OrganisationControllerInt;
 import ac.za.cput.adp3.xyzcongolmerate.domain.org.Organisation;
-import ac.za.cput.adp3.xyzcongolmerate.service.org.OrganisationService;
 import ac.za.cput.adp3.xyzcongolmerate.service.org.impl.OrganisationServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
-import java.util.HashSet;
 import java.util.Set;
 
 @RestController

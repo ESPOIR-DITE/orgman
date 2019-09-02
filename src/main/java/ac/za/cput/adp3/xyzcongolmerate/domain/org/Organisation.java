@@ -24,7 +24,7 @@ public class Organisation {
 
     @Override
     public String toString() {
-        return "Organisation{" +
+        return "impl{" +
                 "orgCode='" + orgCode + '\'' +
                 ", orgName='" + orgName + '\'' +
                 '}';
