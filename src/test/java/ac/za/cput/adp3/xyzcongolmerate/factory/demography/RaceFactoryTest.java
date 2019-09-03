@@ -12,5 +12,6 @@ public class RaceFactoryTest {
     public void buildRace() {
         Race race = RaceFactory.buildRace("BLACK");
         Assert.assertNotNull(race);
+        System.out.println(race.toString());
     }
 }

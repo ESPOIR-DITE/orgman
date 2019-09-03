@@ -22,7 +22,7 @@ public class Helper {
             if(Character.isUpperCase(className.charAt(i)))
             {
 
-                upperLetter+=" "+className.charAt(i);
+                upperLetter+=""+className.charAt(i);
             }
         }
         return upperLetter;
