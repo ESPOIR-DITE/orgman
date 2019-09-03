@@ -38,7 +38,7 @@ import org.junit.runners.Suite;
         UserDemographyFactoryTest.class,
         UserFactoryTest.class,
         UserRoleFactoryTest.class,
-        GenderRepositoryImplTest.class,
+       /** GenderRepositoryImplTest.class,
         RaceRepositoryImplTest.class,
         RoleRepositoryImplTest.class,
         OrganisationRepositoryImplTest.class,
@@ -53,7 +53,7 @@ import org.junit.runners.Suite;
         OrganisationUserServiceImplTest.class,
         UserDemographyServiceImplTest.class,
         UserRoleServiceImplTest.class,
-        UserServiceImplTest.class
+        UserServiceImplTest.class*/
 
 })
 
