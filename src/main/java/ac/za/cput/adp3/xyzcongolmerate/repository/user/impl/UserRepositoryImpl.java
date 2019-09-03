@@ -28,7 +28,7 @@ public class UserRepositoryImpl implements UserRepository {
         if(user1==null){
             userDB.add(user);
             return user;
-        }return user1;
+        }return user1;// if the user exist the repository will output the old without creating again
     }
 
 

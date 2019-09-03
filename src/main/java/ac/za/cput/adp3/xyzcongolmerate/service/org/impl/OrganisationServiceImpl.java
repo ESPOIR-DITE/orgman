@@ -5,9 +5,10 @@ import ac.za.cput.adp3.xyzcongolmerate.repository.org.OrganisationRepository;
 import ac.za.cput.adp3.xyzcongolmerate.repository.org.impl.OrganisationRepositoryImpl;
 import ac.za.cput.adp3.xyzcongolmerate.service.org.OrganisationService;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-@Component
+@Service
 public class OrganisationServiceImpl implements OrganisationService {
 
     private OrganisationRepositoryImpl organisationRepository;

@@ -4,9 +4,10 @@ import ac.za.cput.adp3.xyzcongolmerate.domain.user.User;
 import ac.za.cput.adp3.xyzcongolmerate.repository.user.UserRepository;
 import ac.za.cput.adp3.xyzcongolmerate.repository.user.impl.UserRepositoryImpl;
 import ac.za.cput.adp3.xyzcongolmerate.service.user.UserService;
+import org.springframework.stereotype.Component;
 
 import java.util.Set;
-
+@Component
 public class UserServiceImpl implements UserService {
 
     private UserRepositoryImpl userRepository;

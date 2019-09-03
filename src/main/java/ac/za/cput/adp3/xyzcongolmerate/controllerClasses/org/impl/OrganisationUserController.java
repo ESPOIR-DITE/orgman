@@ -4,6 +4,7 @@ import ac.za.cput.adp3.xyzcongolmerate.controllerClasses.org.OrganisationControl
 import ac.za.cput.adp3.xyzcongolmerate.controllerClasses.org.OrganisationUserControllerInt;
 import ac.za.cput.adp3.xyzcongolmerate.domain.org.Organisation;
 import ac.za.cput.adp3.xyzcongolmerate.domain.org.OrganisationUser;
+import ac.za.cput.adp3.xyzcongolmerate.factory.org.OrganisationUserFactory;
 import ac.za.cput.adp3.xyzcongolmerate.service.org.OrganisationService;
 import ac.za.cput.adp3.xyzcongolmerate.service.org.OrganisationUserService;
 import ac.za.cput.adp3.xyzcongolmerate.service.org.impl.OrganisationUserServiceImpl;
@@ -22,11 +23,16 @@ public class OrganisationUserController implements OrganisationUserControllerInt
         return "home";
     }
     @PostMapping("/create")
-    @Override
     public OrganisationUser create(@RequestBody OrganisationUser organisationUser) {
         System.out.println(organisationUser.toString());
 
         return organisationUserService.create(organisationUser);
+    }
+
+    @GetMapping(value = "/create")
+    public OrganisationUser create(@RequestParam String orgCode, @RequestParam String userEmail) {
+        OrganisationUser valeu= OrganisationUserFactory.buildOrganisationUser(orgCode,userEmail);
+        return organisationUserService.create(valeu);
     }
 
     @Override
