@@ -4,9 +4,10 @@ import ac.za.cput.adp3.xyzcongolmerate.domain.demography.Gender;
 import ac.za.cput.adp3.xyzcongolmerate.repository.demography.GenderRepository;
 import ac.za.cput.adp3.xyzcongolmerate.repository.demography.impl.GenderRepositoryImpl;
 import ac.za.cput.adp3.xyzcongolmerate.service.demography.GenderService;
+import org.springframework.stereotype.Component;
 
 import java.util.Set;
-
+@Component
 public class GenderServiceImpl implements GenderService {
 
     private GenderRepository genderRepository;
