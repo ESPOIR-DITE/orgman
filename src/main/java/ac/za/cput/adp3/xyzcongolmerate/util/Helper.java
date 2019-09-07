@@ -16,7 +16,7 @@ public class Helper {
         String upperLetter="";
         String className = getClassName(aClass);
 
-        
+
         for(int i=0;i<className.length();i++){
 
             if(Character.isUpperCase(className.charAt(i)))
