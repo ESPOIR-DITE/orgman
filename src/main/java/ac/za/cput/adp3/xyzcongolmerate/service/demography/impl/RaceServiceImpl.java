@@ -4,9 +4,10 @@ import ac.za.cput.adp3.xyzcongolmerate.domain.demography.Race;
 import ac.za.cput.adp3.xyzcongolmerate.repository.demography.RaceRepository;
 import ac.za.cput.adp3.xyzcongolmerate.repository.demography.impl.RaceRepositoryImpl;
 import ac.za.cput.adp3.xyzcongolmerate.service.demography.RaceService;
+import org.springframework.stereotype.Component;
 
 import java.util.Set;
-
+@Component
 public class RaceServiceImpl implements RaceService {
 
     private RaceRepository raceRepository;
