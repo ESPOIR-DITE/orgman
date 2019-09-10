@@ -4,9 +4,10 @@ import ac.za.cput.adp3.xyzcongolmerate.domain.user.UserRole;
 import ac.za.cput.adp3.xyzcongolmerate.repository.user.UserRoleRepository;
 import ac.za.cput.adp3.xyzcongolmerate.repository.user.impl.UserRoleRepositoryImpl;
 import ac.za.cput.adp3.xyzcongolmerate.service.user.UserRoleService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class UserRoleServiceImpl implements UserRoleService {
 
     private UserRoleRepository userRoleRepository;

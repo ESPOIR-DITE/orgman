@@ -68,4 +68,13 @@ public class OrganisationUserController implements OrganisationUserControllerInt
     public Set<OrganisationUser> getAll() {
         return organisationUserService.getAll();
     }
+
+    @GetMapping("/getUserName")
+    public Set<String> getUserFullNamesInOrganisation(String orgCode){
+        return organisationUserService.getUserFullNamesInOrganisation(orgCode);
+    }
+    @GetMapping("/getUserOrg")
+    public Set<String> getUserOrganisations(@RequestParam String userEmail){
+        return organisationUserService.getUserOrganisations(userEmail);
+    }
 }
